@@ -111,41 +111,6 @@ body{
     background-color: #f3f3f3;
 }
 
-/*header style*/
-header{
-    background-color: #fff;
-    display: inline;
-}
-
-header .header-logo {
-    font-family: adobe hebrew;
-    font-size: 25px;
-    color: #111;
-    font-weight: 900;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    padding: 15px 0px; 
-    width: 60%
-}
-
-header nav ul {
-    display:inline-block;
-    margin: 0 auto;
-    width: 40%;
-}
-
-header nav ul li{
-    display: inline-block;
-    list-style: none;
-    padding: 0 16px;
-}
-
-header nav ul li a{
-    color: rgb(204,0,17);
-    letter-spacing: 3px;
-}
-
 /*main style*/
 main{
     display:flex;
@@ -168,12 +133,13 @@ main > div{
 }
 
 .index-main-banner h1 {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 900;
-    color: whitesmoke;
+    color: #111;
     text-align: center;
     line-height: 60px;
-
+    text-transform: uppercase;
+    font-family: 'PT Serif', serif;
 }
 
 .index-main-banner h2 {
@@ -188,4 +154,15 @@ main > div{
 
 .index-main-login{
     height: 100vh;
+}
+
+.index-main-banner h3{
+    font-family: adobe hebrew;
+    font-size: 50px;
+    color: white;
+    font-weight: 900;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px 0px; 
 }
