@@ -117,6 +117,16 @@ header{
     height: 100px;
 }
 
+main{
+    background-image: url(images/photo5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height:calc(100vh - 100px);
+
+}
+
 header .header-logo {
     font-family: adobe hebrew;
     font-size: 25px;
@@ -145,19 +155,6 @@ header nav ul li a{
     letter-spacing: 3px;
 }
 
-main{
-    background-image: url(images/ben.jpg;)
-    height: calc(100vh - 100px);
-}
-
-.index-main{
-    
-}
-
-.index-banner{
-    width: 100%;
-}
-
 .index-banner h1 {
     font-size: 50px;
     font-weight: 900;
@@ -166,6 +163,8 @@ main{
     line-height: 60px;
 
 }
+
+.index-banner
 
 .index-banner h2 {
     font-size: 25px;
