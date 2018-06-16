@@ -155,6 +155,8 @@ main > div{
 
 .index-main-login{
     height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .index-main-banner h3{
