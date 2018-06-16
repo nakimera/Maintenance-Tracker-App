@@ -133,7 +133,7 @@ main > div{
 }
 
 .index-main-banner h1 {
-    font-size: 50px;
+    font-size: 62px;
     font-weight: 900;
     color: #111;
     text-align: center;
@@ -145,6 +145,7 @@ main > div{
 
 .index-main-banner h2 {
     font-size: 25px;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
     font-weight: 200;
     font-style: italic;
     color: white;
@@ -161,7 +162,7 @@ main > div{
 
 .index-main-banner h3{
     font-family: 'Capriola', sans-serif;
-    font-size: 55px;
+    font-size: 60px;
     color: white;
     font-weight: 900;
     display: block;
@@ -172,21 +173,23 @@ main > div{
     text-shadow: 2px 2px 8px #111;
 }
 
-.index-login-form{
+.form{
     width: 400px;
     height: 350px;
     margin: 0 auto;
     background-color: white;
+
 }
 
 .form-header{
-    height: 38px;
+    height: 40px;
     background-color: orangered;
     color: white;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: 700;
     text-align: center;
-    padding-top: 10px;
+    padding-bottom: 20px;
+    font-family: 'Quantico', sans-serif;
 }
 
 input{
@@ -220,8 +223,14 @@ button{
 label{
     font-size: 18px;
     margin: 15px 0 8px 0;
+    
 }
 
 span{
     text-decoration: underline;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+.index-signup{
+    
 }
