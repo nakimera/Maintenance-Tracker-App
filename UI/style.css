@@ -144,7 +144,7 @@ main > div{
 }
 
 .index-main-banner h2 {
-    font-size: 25px;
+    font-size: 23px;
     font-family: 'IBM Plex Sans Condensed', sans-serif;
     font-weight: 200;
     font-style: italic;
@@ -152,6 +152,7 @@ main > div{
     text-align: center;
     text-shadow: 2px 2px 8px #111;
     line-height: 30px;
+    margin-top: 20px;
 }
 
 .index-main-login{
@@ -171,6 +172,10 @@ main > div{
     padding: 15px 0px; 
     margin-top: 30px;
     text-shadow: 2px 2px 8px #111;
+}
+
+.logo{
+    text-align: center;
 }
 
 .form{
@@ -230,6 +235,41 @@ span{
     font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
-.index-signup{
-    
+/*user home page*/
+.flex-container{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+}
+
+.flex-container > div {
+    margin: 20px;
+}
+
+.flex-left{
+   
+
+}
+
+.request-form{
+    width: 350px;
+    height: 400px;
+    color: white;
+    background-color: orangered;
+}
+
+.flex-center{
+    border: solid 1px;
+    width: 400px;
+    height: 600px;
+}
+
+.flex-right{
+    border: solid 1px;
+    width: 350px;
+    height: 300px;;
+}
+
+option{
+    width: 70%;
 }
