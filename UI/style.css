@@ -139,7 +139,7 @@ main > div{
     text-align: center;
     line-height: 60px;
     text-transform: uppercase;
-    font-family: 'PT Serif', serif;
+    font-family: 'Quantico', sans-serif;
     letter-spacing: 1px;
 }
 
@@ -160,14 +160,16 @@ main > div{
 }
 
 .index-main-banner h3{
-    font-family: adobe hebrew;
-    font-size: 50px;
+    font-family: 'Capriola', sans-serif;
+    font-size: 55px;
     color: white;
     font-weight: 900;
     display: block;
     margin: 0 auto;
     text-align: center;
     padding: 15px 0px; 
+    margin-top: 30px;
+    text-shadow: 2px 2px 8px #111;
 }
 
 .index-login-form{
@@ -198,7 +200,7 @@ input.placeholder{
     text-align: center;
 }
 
-.flex-login{
+.index-login{
     display: flex;
     flex-direction: column;
     align-items: center;
