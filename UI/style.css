@@ -119,23 +119,22 @@ main{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 100%;
     height:100vh;
 }
 
 main > div{
-    width: 610px;
+    width: 650px;
     
 }
 
 .index-main-banner{
-    background-color: rgb(255, 68, 0, 0.8);
+    background-color: rgb(255, 68, 0, 0.85);
 }
 
 .index-main-banner h1 {
     font-size: 62px;
     font-weight: 900;
-    color: #111;
+    color: white;
     text-align: center;
     line-height: 60px;
     text-transform: uppercase;
@@ -144,7 +143,7 @@ main > div{
 }
 
 .index-main-banner h2 {
-    font-size: 25px;
+    font-size: 23px;
     font-family: 'IBM Plex Sans Condensed', sans-serif;
     font-weight: 200;
     font-style: italic;
@@ -152,6 +151,7 @@ main > div{
     text-align: center;
     text-shadow: 2px 2px 8px #111;
     line-height: 30px;
+    margin-top: 20px;
 }
 
 .index-main-login{
@@ -164,21 +164,23 @@ main > div{
     font-family: 'Capriola', sans-serif;
     font-size: 60px;
     color: white;
-    font-weight: 900;
     display: block;
     margin: 0 auto;
     text-align: center;
     padding: 15px 0px; 
     margin-top: 30px;
-    text-shadow: 2px 2px 8px #111;
+    font-weight: bolder;
+}
+
+.logo{
+    text-align: center;
 }
 
 .form{
-    width: 400px;
+    width: 60%;
     height: 350px;
     margin: 0 auto;
     background-color: white;
-
 }
 
 .form-header{
@@ -231,6 +233,64 @@ span{
     font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
-.index-signup{
+/*user home page*/
+.flex-container{
+    display: flex;
+    flex-flow:wrap;
+    justify-content: center;
+}
+
+.flex-container > div {
+    width: 350px;
+    border: orange solid 1px;
+    text-align: center;
+    margin: 30px;
+
+}
+
+.flex-left{
+    height: 400px;
+}
+
+.request-form{
+    height: 400px;
+    color: white;
+    background-color: orangered;
+}
+
+.flex-center{
+    height: 600px;
+}
+
+.flex-right{
+    height: 300px;
+}
+
+option{
+    width: 70%;
+}
+
+.category{
+    margin: 10px;
+}
+
+select{
+    width: 92%;
+    height: 33px;
     
+}
+
+.user-request{
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0;
+}
+.req-submit{
+    border: solid 1px ;
+    background-color: white;
+    color: orangered;
+}
+
+textarea{
+    width: 92%;
 }
