@@ -129,13 +129,13 @@ main > div{
 }
 
 .index-main-banner{
-    background-color: rgb(255, 68, 0, 0.8);
+    background-color: rgb(255, 68, 0, 0.85);
 }
 
 .index-main-banner h1 {
     font-size: 62px;
     font-weight: 900;
-    color: #111;
+    color: white;
     text-align: center;
     line-height: 60px;
     text-transform: uppercase;
@@ -165,13 +165,12 @@ main > div{
     font-family: 'Capriola', sans-serif;
     font-size: 60px;
     color: white;
-    font-weight: 900;
     display: block;
     margin: 0 auto;
     text-align: center;
     padding: 15px 0px; 
     margin-top: 30px;
-    text-shadow: 2px 2px 8px #111;
+    font-weight: bolder;
 }
 
 .logo{
@@ -272,4 +271,33 @@ span{
 
 option{
     width: 70%;
+}
+
+.category{
+    margin: 10px;
+}
+
+select{
+    width: 92%;
+    height: 33px;
+    margin-left: 15px;
+    
+}
+
+textarea{
+    margin:15px 0 0 15px;
+    
+}
+
+.user-request{
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 0;
+    padding-top: 10px;
+}
+.req-submit{
+    border: solid 1px ;
+    background-color: white;
+    color: orangered;
+    margin:20px 0 0 20px;
 }
