@@ -124,7 +124,7 @@ main{
 }
 
 main > div{
-    width: 610px;
+    width: 50%;
     
 }
 
@@ -178,7 +178,7 @@ main > div{
 }
 
 .form{
-    width: 400px;
+    width: 60%;
     height: 350px;
     margin: 0 auto;
     background-color: white;
@@ -237,36 +237,34 @@ span{
 /*user home page*/
 .flex-container{
     display: flex;
-    flex-flow: row wrap;
-    padding: 20px;
+    flex-flow:wrap;
+    justify-content: center;
 }
 
 .flex-container > div {
-    margin: 20px;
+    width: 350px;
+    border: orange solid 1px;
+    text-align: center;
+    margin: 30px;
+
 }
 
 .flex-left{
-   
-
+    height: 400px;
 }
 
 .request-form{
-    width: 350px;
     height: 400px;
     color: white;
     background-color: orangered;
 }
 
 .flex-center{
-    border: solid 1px;
-    width: 400px;
     height: 600px;
 }
 
 .flex-right{
-    border: solid 1px;
-    width: 350px;
-    height: 300px;;
+    height: 300px;
 }
 
 option{
@@ -280,24 +278,21 @@ option{
 select{
     width: 92%;
     height: 33px;
-    margin-left: 15px;
     
 }
 
 textarea{
-    margin:15px 0 0 15px;
+    margin-top: 20px;
     
 }
 
 .user-request{
     font-size: 30px;
     text-align: center;
-    margin: 20px 0;
-    padding-top: 10px;
+    padding: 10px 0;
 }
 .req-submit{
     border: solid 1px ;
     background-color: white;
     color: orangered;
-    margin:20px 0 0 20px;
 }
