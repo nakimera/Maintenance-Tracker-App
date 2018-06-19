@@ -260,6 +260,7 @@ span{
 
 .flex-right{
     height: 300px;
+    background-color: #f2f2f2;
 }
 
 option{
@@ -289,4 +290,19 @@ select{
 
 textarea{
     width: 92%;
+}
+
+/*Table*/
+table{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 20px;
+    line-height: 1.6;
+    flex: 1 1 auto;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+th{
+    font-weight: 700;
+    color:orangered;
 }
