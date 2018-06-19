@@ -107,10 +107,6 @@ input, select {
     text-decoration: none;
 }
 
-body{
-    background-color: #f3f3f3;
-}
-
 /*main style*/
 main{
     display:flex;
@@ -259,6 +255,7 @@ span{
 
 .flex-center{
     height: 600px;
+    background-color: #f2f2f2;
 }
 
 .flex-right{
