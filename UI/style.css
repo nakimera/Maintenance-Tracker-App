@@ -304,11 +304,26 @@ table{
     margin: 20px;
     line-height: 1.6;
     flex: 1 1 auto;
-    border-bottom: 1px solid #d0d0d0;
+    width: 100%;
 }
 
-th{
+h4{
     font-weight: 700;
     color:orangered;
     font-size: 25px;
+    text-align: left;
+    padding: 15px;
 }
+
+td {
+    width: 30%;
+    text-align: left;
+  }
+  
+tr {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 5px;
+    text-align: left;
+  }
