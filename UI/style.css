@@ -234,6 +234,11 @@ span{
     display: flex;
     flex-flow:wrap;
     justify-content: center;
+    background-image: url(images/photo5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
 }
 
 .flex-container > div {
@@ -305,4 +310,5 @@ table{
 th{
     font-weight: 700;
     color:orangered;
+    font-size: 25px;
 }
