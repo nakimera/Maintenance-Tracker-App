@@ -307,23 +307,3 @@ table{
     width: 100%;
 }
 
-h4{
-    font-weight: 700;
-    color:orangered;
-    font-size: 25px;
-    text-align: left;
-    padding: 15px;
-}
-
-td {
-    width: 30%;
-    text-align: left;
-  }
-  
-tr {
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    margin-bottom: 5px;
-    text-align: left;
-  }
