@@ -230,14 +230,6 @@ label{
 
 span{
     text-decoration: underline;
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
-}
-
-/*user home page*/
-.flex-container{
-    display: flex;
-    flex-flow:wrap;
-    justify-content: center;
 }
 
 .flex-container > div {
