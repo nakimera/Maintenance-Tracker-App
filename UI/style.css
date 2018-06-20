@@ -275,9 +275,9 @@ span{
 
 .flex-right{
     height: 300px;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    
     background-color: orangered;
+    box-shadow: 6px 6px #ffece5;
 }
 
 option{
