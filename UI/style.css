@@ -270,24 +270,14 @@ span{
     height: 90px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
-}
-
-.flex-center > div:nth-of-type(odd) {
-    background-color:#ffece5;
-}
-
-.flex-center > div:nth-of-type(even) {
     background-color: #ffece5;
 }
-
-  
 
 .flex-right{
     height: 300px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: orangered;
-
 }
 
 option{
