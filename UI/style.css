@@ -255,7 +255,7 @@ span{
 .request-form{
     height: 400px;
     color: white;
-    background-color: orangered;
+    background-color: rgb(255, 69, 0);
 }
 
 .flex-center{
@@ -265,23 +265,29 @@ span{
 }
 
 .flex-center > div{
-    margin: 0 0 10px 0;
+    margin: 0 0 5px 0;
     width: 100%;
-    height: 120px;
+    height: 90px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .flex-center > div:nth-of-type(odd) {
-    background-color: orangered;
-  }
-  
+    background-color:#ffece5;
+}
+
 .flex-center > div:nth-of-type(even) {
-    background-color: #f2f2f2;
-  }
+    background-color: #ffece5;
+}
+
   
 
 .flex-right{
     height: 300px;
-    background-color: #f2f2f2;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: orangered;
+
 }
 
 option{
