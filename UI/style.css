@@ -293,8 +293,11 @@ textarea {
     height: 33px;
     border: solid white 2px;
     position: absolute;
-    top: 15px;
     right: 50px;
+}
+
+.user-signout {
+    top: 15px;
 }
 
 table {
@@ -370,4 +373,24 @@ td {
 .thick {
     font-size: 1.2em;
     font-weight: bold;
+}
+
+/*Admin page*/
+.searchbar {
+    width: 50%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: 0px;
+    height: 33px;
+}
+
+.btn-search {
+    width: 100px;
+    height: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.signout-admin {
+    top: 50px;
 }
