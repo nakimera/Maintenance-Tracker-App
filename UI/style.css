@@ -107,6 +107,10 @@ input, select {
     text-decoration: none;
 }
 
+body{
+    background-color: #f3f3f3;
+}
+
 /*main style*/
 main{
     display:flex;
@@ -115,22 +119,23 @@ main{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    width: 100%;
     height:100vh;
 }
 
 main > div{
-    width: 650px;
+    width: 610px;
     
 }
 
 .index-main-banner{
-    background-color: rgb(255, 68, 0, 0.85);
+    background-color: rgb(255, 68, 0, 0.8);
 }
 
 .index-main-banner h1 {
     font-size: 62px;
     font-weight: 900;
-    color: white;
+    color: #111;
     text-align: center;
     line-height: 60px;
     text-transform: uppercase;
@@ -139,15 +144,13 @@ main > div{
 }
 
 .index-main-banner h2 {
-    font-size: 23px;
+    font-size: 25px;
     font-family: 'IBM Plex Sans Condensed', sans-serif;
     font-weight: 200;
     font-style: italic;
     color: white;
     text-align: center;
-    text-shadow: 2px 2px 8px #111;
     line-height: 30px;
-    margin-top: 20px;
 }
 
 .index-main-login{
@@ -160,23 +163,21 @@ main > div{
     font-family: 'Capriola', sans-serif;
     font-size: 60px;
     color: white;
+    font-weight: 900;
     display: block;
     margin: 0 auto;
     text-align: center;
     padding: 15px 0px; 
     margin-top: 30px;
-    font-weight: bolder;
-}
-
-.logo{
-    text-align: center;
+    text-shadow: 2px 2px 8px #111;
 }
 
 .form{
-    width: 60%;
+    width: 400px;
     height: 350px;
     margin: 0 auto;
     background-color: white;
+
 }
 
 .form-header{
@@ -205,7 +206,7 @@ input.placeholder{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 16px;
 }
 
 button{
@@ -216,7 +217,7 @@ button{
     height: 30px;
     font-size: 15px;
     border-radius:15px;
-    margin-top: 16px;
+    margin-top: 10px;
 }
 label{
     font-size: 18px;
@@ -227,93 +228,4 @@ label{
 span{
     text-decoration: underline;
     font-family: 'IBM Plex Sans Condensed', sans-serif;
-}
-
-/*user home page*/
-body{
-    background-image: url(images/photo5.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.header {
-    padding: 30px;
-    text-align: center;
-    background: rgb(255, 69, 0, 0.8);
-    color: white;
-    font-size: 50px;
-    font-family: 'Quantico', sans-serif;
-    text-transform: uppercase;
-}
-
-.row {  
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-top: 20px;
-}
-
-.row-left {
-    width: 550px;
-    padding: 5px;
-    height: 360px;
-    margin-top: 30px;
-}
-
-.row-right {
-    width: 700px;
-    margin-right: 80px;
-}
-
-.btn-signout {
-    width: 120px;
-    color: white;
-    border: solid #cccccc 2px;
-    height: 35px;
-}
-
-option{
-    width: 70%;
-}
-
-.category{
-    margin: 0px;
-}
-
-select{
-    width: 92%;
-    height: 33px;
-}
-
-.user-request{
-    font-size: 30px;
-    text-align: center;
-}
-
-.req-submit{
-    background-color: orangered;
-    color: white;
-}
-
-textarea{
-    width: 92%;
-}
-
-.num{
-    margin-top: 3px;
-}
-
-.row-list{
-    background-color: white;
-    width: 100%;
-    height: 80px;
-    margin-top: 10px;
-}
-
-h4{
-    font-size: 30px;
-    color: white;
-    font-weight: bold;
-    font-family: 'Quantico', sans-serif;
 }
