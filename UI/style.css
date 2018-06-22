@@ -322,6 +322,10 @@ th {
     color: #333;
 }
 
+.orange {
+    color: orange;
+}
+
 .red {
     color: red;
 }
@@ -376,21 +380,27 @@ td {
 }
 
 /*Admin page*/
-.searchbar {
-    width: 50%;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    border: 0px;
-    height: 33px;
-}
-
 .btn-search {
     width: 100px;
     height: 30px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-radius: 0;
+    letter-spacing: 2px;
+    font-weight: 200;
 }
 
 .signout-admin {
-    top: 50px;
+    top: 55px;
+}
+
+.filter-bar {
+    width: 45%;
+    border: 0px;
+    padding-left: 30px;
+}
+
+.btn-details {
+    text-transform: uppercase;
+    width: 120px;
+    height: 33px;
+    border: solid white 2px;
 }

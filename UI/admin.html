@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Maintenance Tracker Sign up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Capriola|IBM+Plex+Sans+Condensed:400i|Quantico|Roboto" rel="stylesheet">
+</head>
+<body>
+    <div class="header">  
+        <h2>Maintenance Tracker</h2>
+        <select name="status" class="filter-bar">
+                <option value="pendimg">Pending</option>
+                <option value="accepted">Accepted</option>
+                <option value="resolved">Resolved</option>
+                <option value="Rejected">Rejected</option>
+            </select> 
+        <button class="btn-search">Filter</button>
+        <button class="btn-signout signout-admin">Sign out</button>
+    </div>
+    <div class="row">
+        <div class="row-right">
+            <div class="form-header curved">
+                <label>User Requests</label>
+            </div>
+            <div class="row-list">
+                    <table>
+                            <th>Television</th>
+                            <th></th>
+                            <th class="green">Approved</th>
+                            <tr class="info">
+                                <td>Category:</td>
+                                <td>Maintenance </td>
+                                <td>Quantity: </td>
+                                <td>5</td>
+                                <td><button class="btn-details">Details</button></td>
+                            </tr>
+                        </table>
+                </div>
+            
+            <div class="row-list">
+                <table>
+                    <th>Bulbs</th>
+                    <th></th>
+                    <th class="blue">Pending</th>
+                    <tr class="info">
+                        <td>Category:</td>
+                        <td>Maintenance </td>
+                        <td>Quantity: </td>
+                        <td>5</td>
+                        <td><button class="btn-details">Details</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="row-list">
+                <table>
+                    <th>Cabinet</th>
+                    <th></th>
+                    <th class="orange">Accepted</th>
+                    <tr class="info">
+                        <td>Category:</td>
+                        <td>Repairing </td>
+                        <td>Quantity: </td>
+                        <td>200</td>
+                        <td><button class="btn-details">Details</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="row-list">
+                    <table>
+                        <th>Laptop</th>
+                        <th></th>
+                        <th class="red">Rejected</th>
+                        <tr class="info">
+                            <td>Category:</td>
+                            <td>Repairing </td>
+                            <td>Quantity: </td>
+                            <td>20</td>
+                            <td><button class="btn-details">Details</button></td>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+        <div class="row-left">
+
+        </div>
+    </div>
+
+    </div>
+</body>
+</html>
