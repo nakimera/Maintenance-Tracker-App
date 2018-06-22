@@ -340,15 +340,15 @@ td {
 }
 
 .description {
-    width: 5%;
+    width: 10%;
 }
 
 .category {
-    width: 5%
+    width: 10%;
 }
 
 .quantity {
-    width: 5%
+    width: 10%;
 }
 
 .qty{
@@ -356,15 +356,15 @@ td {
 }
 
 .desc {
-    width: 70%
+    width: 40%;
 }
 
 .category {
-    width: 5%;
+    width: 10%;
 }
 
 .cat {
-    width: 5%;
+    width: 10%;
 }
 
 .thick {
