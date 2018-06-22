@@ -242,3 +242,30 @@ span{
     padding: 20px;
     text-align: center;
 }
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+}
+
+.row-left {
+    width: 450px;
+}
+
+.form-request{
+    height: 380px;
+}
+
+select{
+    width: 90%;
+    height: 34px;
+}
+
+textarea {
+    width: 90%;
+}
+
+.num {
+    margin-top: 5px;
+}
