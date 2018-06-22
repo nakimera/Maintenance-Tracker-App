@@ -403,4 +403,28 @@ td {
     width: 120px;
     height: 33px;
     border: solid white 2px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.container {
+    width: 350px;
+    height: 380px;
+    background-color: orangered;
+    margin: 0 auto;
+    color: white;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.radio {
+    width: 30px;
+    height: 0 px;
+    text-indent: 0px;
+    margin: 1px;
+}
+
+.detail {
+    line-height: 25px;
 }
