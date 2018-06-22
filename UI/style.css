@@ -296,3 +296,78 @@ textarea {
     top: 15px;
     right: 50px;
 }
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    align-self: center;
+    padding: 10px;
+    margin: 0  auto;
+}
+
+.requests {
+    table-layout: fixed;    
+}
+
+th { 
+    font-size: 1.2em;
+    text-align: left;
+    padding: 10px;
+}
+
+.black {
+    color: #333;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+td {
+    padding: 15px;
+}
+
+.info {
+    border-top: solid #999 1px;
+}
+
+.description {
+    width: 5%;
+}
+
+.category {
+    width: 5%
+}
+
+.quantity {
+    width: 5%
+}
+
+.qty{
+    width: 5%;
+}
+
+.desc {
+    width: 70%
+}
+
+.category {
+    width: 5%;
+}
+
+.cat {
+    width: 5%;
+}
+
+.thick {
+    font-size: 1.2em;
+    font-weight: bold;
+}
