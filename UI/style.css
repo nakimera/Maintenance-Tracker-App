@@ -234,3 +234,13 @@ span{
     text-decoration: underline;
     font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
+
+/*User page*/
+.header{
+    background-color: rgb(255, 69, 0, 0.8);
+    color: white;
+    font-size: 35px;
+    font-family: 'Quantico', sans-serif;
+    padding: 20px;
+    text-align: center;
+}
