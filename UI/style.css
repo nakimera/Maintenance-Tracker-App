@@ -247,6 +247,7 @@ span{
     display: flex;
     flex-flow: row wrap;
     padding: 20px;
+    justify-content: center;
 }
 
 .row-left {
@@ -268,4 +269,20 @@ textarea {
 
 .num {
     margin-top: 5px;
+}
+
+.row-right {
+    width: 800px;
+}
+
+.row-list {
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    margin-bottom: 5px;
+}
+
+.curved {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
