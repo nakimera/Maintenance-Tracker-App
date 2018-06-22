@@ -3,57 +3,61 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Maintenance Tracker App</title>
+    <title>Maintenance Tracker Sign up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <script src="main.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Capriola|IBM+Plex+Sans+Condensed:400i|Quantico|Roboto" rel="stylesheet">
 </head>
 <body>
-    <div class="flex-container">
-        <div class="flex-left">
-                <div class="request-form">
-                    <div class="user-request">Make Request</div>
-                    <form>
-                        <fieldset>
-                            <select name="category">
-                                <option value="repair">Repair</option>
-                                <option value="saab">Mainntenance</option>
-                            </select> 
-                            <input type="text" placeholder="Item Name">
-                            <input type="number" placeholder="Quantity">
-                            <textarea name="description" rows="6" cols="37">
-                                Description
-                            </textarea> 
-                            <button type="submit" class="req-submit">Submit Request</button>  
-                        </fieldset>
-                    </form> 
-                </div>    
+    <div class="header">  
+        <h2>Maintenance Tracker</h2>
+    </div>
+    <div class="row">
+        <div class="row-left">
+            <div class="form">
+                <div class="form-header">
+                    <label>Make Request</label>
+                </div>
+                <form>
+                    <div class="index-login">
+                        <select name="category">
+                            <option value="repair">Repair</option>
+                            <option value="saab">Mainntenance</option>
+                        </select> 
+                        <input type="text" placeholder="Item Name">
+                        <input type="number" placeholder="Quantity" class="num">
+                        <textarea name="description" rows="4" cols="45">Description</textarea> 
+                        <button type="submit" class="req-submit">Submit Request</button>  
+                    </div>    
+                </form> 
+            </div>    
         </div>
-        <div class="flex-center">
-            <div>
+        <div class="row-right">
+            <div class="form-header">
+                <label>My Requests</label>
+            </div>
+            <div class="row-list">
 
             </div>
-            <div>
-                
+            <div class="row-list">
+
             </div>
-            <div>
-                
+            <div class="row-list">
+
             </div>
-            <div>
-                
+            <div class="row-list">
+
             </div>
-            <div>
-                
+            <div class="row-list">
+
             </div>
-            <div>
-                
-            </div>
-        </div>
-        <div class="flex-right">
+    
+    
 
         </div>
     </div>
-</body>   
-</html> 
+
+    </div>
+</body>
+</html>

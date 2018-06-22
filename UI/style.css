@@ -205,7 +205,7 @@ input.placeholder{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 16px;
+    margin-top: 10px;
 }
 
 button{
@@ -214,7 +214,7 @@ button{
     color: white;
     width: 88%;
     height: 30px;
-    font-size: 18px;
+    font-size: 15px;
     border-radius:15px;
     margin-top: 16px;
 }
@@ -230,54 +230,47 @@ span{
 }
 
 /*user home page*/
-.flex-container{
-    display: flex;
-    flex-flow:wrap;
-    justify-content: center;
+body{
     background-image: url(images/photo5.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
 }
 
-.flex-container > div {
-    width: 380px;
+.header {
+    padding: 30px;
     text-align: center;
-    margin: 15px;
-
-}
-
-.flex-left{
-    height: 400px;
-}
-
-.request-form{
-    height: 400px;
+    background: rgb(255, 69, 0, 0.8);
     color: white;
-    background-color: rgb(255, 69, 0);
+    font-size: 50px;
+    font-family: 'Quantico', sans-serif;
+    text-transform: uppercase;
 }
 
-.flex-center{
-    height: 600px;
+.row {  
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 20px;
 }
 
-.flex-center > div{
-    margin: 0 0 5px 0;
-    width: 100%;
-    height: 90px;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #ffece5;
+.row-left {
+    width: 550px;
+    padding: 5px;
+    height: 360px;
+    margin-top: 30px;
 }
 
-.flex-right{
-    height: 300px;
-    
-    background-color: orangered;
-    box-shadow: 6px 6px #ffece5;
+.row-right {
+    width: 700px;
+    margin-right: 80px;
+}
+
+.btn-signout {
+    width: 120px;
+    color: white;
+    border: solid #cccccc 2px;
+    height: 35px;
 }
 
 option{
@@ -285,13 +278,12 @@ option{
 }
 
 .category{
-    margin: 10px;
+    margin: 0px;
 }
 
 select{
     width: 92%;
     height: 33px;
-    
 }
 
 .user-request{
@@ -300,12 +292,28 @@ select{
 }
 
 .req-submit{
-    border: solid 1px ;
-    background-color: white;
-    color: orangered;
+    background-color: orangered;
+    color: white;
 }
 
 textarea{
     width: 92%;
 }
 
+.num{
+    margin-top: 3px;
+}
+
+.row-list{
+    background-color: white;
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+}
+
+h4{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Quantico', sans-serif;
+}
