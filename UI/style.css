@@ -108,7 +108,11 @@ input, select {
 }
 
 body{
-    background-color: #f3f3f3;
+    background-image: url(images/photo5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
 }
 
 /*main style*/
