@@ -286,3 +286,13 @@ textarea {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
+
+.btn-signout {
+    text-transform: uppercase;
+    width: 120px;
+    height: 33px;
+    border: solid white 2px;
+    position: absolute;
+    top: 15px;
+    right: 50px;
+}
