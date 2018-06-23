@@ -288,7 +288,6 @@ textarea {
 }
 
 .btn-signout {
-    text-transform: uppercase;
     width: 120px;
     height: 33px;
     border: solid white 2px;
@@ -339,7 +338,7 @@ th {
 }
 
 td {
-    padding: 15px;
+    padding: 5px;
 }
 
 .info {
@@ -399,32 +398,56 @@ td {
 }
 
 .btn-details {
-    text-transform: uppercase;
     width: 120px;
     height: 33px;
     border: solid white 2px;
     text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.center {
     display: block;
     margin: 0 auto;
+    margin-top: 10px;
 }
 
 .container {
-    width: 350px;
-    height: 380px;
-    background-color: orangered;
+    width: 340px;
+    height: 360px;
     margin: 0 auto;
-    color: white;
+    color: #111;
     padding: 20px;
     margin-left: 20px;
 }
 
-.radio {
-    width: 30px;
-    height: 0 px;
-    text-indent: 0px;
-    margin: 1px;
+.action {
+    padding-left: 40px;
 }
 
-.detail {
-    line-height: 25px;
+.radio {
+    width: 60px;
+    margin: -5px;
+
+}
+
+p {
+    padding: 20px 0 0 20px;
+    color: orangered;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.left {
+    width: 10px;
+}
+
+.right {
+    width: 100px;
+}
+
+.form-request{
+    height: 400px;
 }

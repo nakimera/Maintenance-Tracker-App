@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Maintenance Tracker Sign up</title>
+    <title>Maintenance Tracker Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <script src="main.js"></script>
@@ -19,7 +19,7 @@
                 <option value="Rejected">Rejected</option>
             </select> 
         <button class="btn-search">Filter</button>
-        <button class="btn-signout signout-admin">Sign out</button>
+        <button class="btn-signout signout-admin uppercase">Sign out</button>
     </div>
     <div class="row">
         <div class="row-right">
@@ -36,7 +36,7 @@
                                 <td>Maintenance </td>
                                 <td>Quantity: </td>
                                 <td>5</td>
-                                <td><button class="btn-details">Details</button></td>
+                                <td><button class="btn-details uppercase center">Details</button></td>
                             </tr>
                         </table>
                 </div>
@@ -51,7 +51,7 @@
                         <td>Maintenance </td>
                         <td>Quantity: </td>
                         <td>5</td>
-                        <td><button class="req-submit btn-details">Details</button></td>
+                        <td><button class=" btn-details uppercase center">Details</button></td>
                     </tr>
                 </table>
             </div>
@@ -65,7 +65,7 @@
                         <td>Repairing </td>
                         <td>Quantity: </td>
                         <td>200</td>
-                        <td><button class="btn-details">Details</button></td>
+                        <td><button class="btn-details uppercase center">Details</button></td>
                     </tr>
                 </table>
             </div>
@@ -79,28 +79,49 @@
                             <td>Repairing </td>
                             <td>Quantity: </td>
                             <td>20</td>
-                            <td><button class="btn-details">Details</button></td>
+                            <td><button class="btn-details uppercase center">Details</button></td>
                         </tr>
                     </table>
                 </div>
         </div>
         <div class="row-left">
-            <div class="container">
-                <div class="detail">
-                    <p>Details</p><br>
-                    <p>Item Name:</p>
-                    <p>Category:</p>
-                    <p>Quantity:</p>
-                    <p>Status:</p>
-                    <p>Description:</p><br>
-                </div>
-                <div>
-                    <p>Action</p><br>
-                        <input class="radio" type="radio" name="actions" value="accepted" checked> Accept<br>
-                        <input class="radio" type="radio" name="actions" value="reject"> Reject<br>
-                        <input class="radio" type="radio" name="actions" value="resolve"> Resolve<br>
-                        <td><button class=" btn-details">Take action</button></td>
-                </div>
+                <div class="form form-request">
+                    <div class="form-header">
+                        <label>Request Details</label>
+                    </div>
+                    <div class="details">
+                        <p>Details</p><br>
+                        <table>
+                            <tr>
+                                <td>Item Name:</td>
+                                <td>Laptop</td>
+                            </tr>
+                            <tr>
+                                <td>Category:</td>
+                                <td>Repair</td>
+                            </tr>
+                            <tr>
+                                <td>Quantity:</td> 
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Description:</td>
+                                <td>I accidentally poured juice in my laptop.
+                                    It cannot power on
+                                </td>
+                            </tr>
+                        </table>
+                        <p>Action</p><br>
+                        <div class="actions">
+                            <input class="radio" type="radio" name="actions" value="accepted" checked> Accept<br>
+                            <input class="radio" type="radio" name="actions" value="reject"> Reject<br>
+                            <input class="radio" type="radio" name="actions" value="resolve"> Resolve<br>
+                            <button type="submit" class="uppercase center" >Take Action</button> 
+                        </div>
+                        
+                        
+                    </div>   
+                </div> 
             </div>
         </div>
     </div>
