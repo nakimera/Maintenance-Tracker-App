@@ -194,7 +194,7 @@ main > div{
     font-family: 'Quantico', sans-serif;
 }
 
-input{
+.text-field{
     width: 90%;
     height: 30px;
     margin: 15px;
@@ -423,14 +423,8 @@ td {
     margin-left: 20px;
 }
 
-.action {
-    padding-left: 40px;
-}
-
-.radio {
-    width: 60px;
-    margin: -5px;
-
+.actions {
+    margin: 0 10px 20px;
 }
 
 p {
