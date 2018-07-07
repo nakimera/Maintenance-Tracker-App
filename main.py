@@ -1,52 +1,34 @@
 from flask import Flask, request, jsonify
 
+from app.models.users import User
+
 app = Flask(__name__)
 app.config["DEBUG"] = True
 
-requests = [
-    {'id': 0,
-    'category': 'Repair',
-    'item_name': 'Laptop',
-    'quantity': 2,
-    'description': 'All 2 computers cannot power on'},
-    {'id': 1,
-    'category': 'Maintenance',
-    'item_name': 'Iphone',
-    'quantity': 1,
-    'description': 'Update operating system'},
-    {'id': 3,
-    'category': 'Maintenance',
-    'item_name': 'Macbook',
-    'quantity': 1,
-    'description': 'Update operating system'}
-]
+users = []
 
 @app.route('/', methods=['GET'])
 def home():
     return "<h1>Maintenance Tracker</h1><p>Hello, World</p>"
 
+@app.route('/users', methods=['GET'])
+def get_users():
+    usernames = []
+    for user in users:
+        usernames.append(user.username)
 
-@app.route('/api/v1/resources/users/requests', methods=['GET'])
-def api_all():
-    return jsonify(requests)
+    return jsonify(usernames)
 
-@app.route('/api/v1/resources/users/requests/<requestId>', methods=['GET'])
-def api_id():
-    if 'id' in request.args:                                           
-        id = int(request.args['id'])                                   
-    else:                                                              
-        return "Error: No id provided. Please specify an ID"
+@app.route('/signup', methods=['POST'])
+def signup_user():
+    print(request.get_json(force=True))
+   
+    return "User successfully added"
 
-    results = []
-
-    for request in requests:
-        if request['id'] == id:
-            results.append(request)
-
-    return jsonify(results)
-
-"""@app.route('/api/v1/resources/users/requests', methods=['POST'])
-
-@app.route('/api/v1/resources/users/requests/<requestId>', methods=['PUT'])"""
 
 app.run()
+ 
+    
+
+
+
