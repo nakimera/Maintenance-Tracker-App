@@ -10,6 +10,7 @@ app.secret_key = os.urandom(12)
 app.config["DEBUG"] = True
 
 users = []
+user_requests = []
 logged_in_user = None
 
 def get_loggedin_user():
@@ -26,7 +27,6 @@ def get_users():
     usernames = []
     for user in users:
         usernames.append(user.username)
-
     return jsonify(usernames)
 
 @app.route('/signup', methods=['POST'])
@@ -51,7 +51,7 @@ def login_user():
                 return 'Either username or password is incorrect'
             
 @app.route('/users/requests', methods=['POST', 'GET'])
-def create_request():
+def requests():
     if request.method == 'POST':
         category = request.form['category']
         item_name = request.form['item_name']
@@ -59,9 +59,17 @@ def create_request():
         description = request.form['description']
         user_request = Request(category, item_name, quantity, description)
         user = get_loggedin_user() 
+        user_requests.append(user_request)
         return "Request successfully created"
 
-
+    if request.method == 'GET':
+        for user_request in user_requests:
+            category = jsonify(category)
+            item_name = jsonify(item_name)
+            quantity = jsonify(quantity)
+            description = jsonify(description)
+            user_requests.append(user_request)
+        return user_requests
 
 app.run()
  
