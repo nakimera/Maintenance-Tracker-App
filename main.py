@@ -21,10 +21,11 @@ def get_users():
 
 @app.route('/signup', methods=['POST'])
 def signup_user():
-    print(request.get_json(force=True))
-   
+    username = request.form['username']
+    password = request.form['password'] 
+    user = User(username,password)
+    users.append(user)
     return "User successfully added"
-
 
 app.run()
  
