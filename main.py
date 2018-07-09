@@ -13,21 +13,9 @@ users = []
 user_requests = []
 logged_in_user = None
 
-def get_loggedin_user():
-    for user in users:
-        if user.username == session['username']:
-            return user
-
 @app.route('/', methods=['GET'])
 def home():
     return "<h1>Maintenance Tracker</h1><p>Hello, World</p>"
-
-@app.route('/users', methods=['GET'])
-def get_users():
-    usernames = []
-    for user in users:
-        usernames.append(user.username)
-    return jsonify(usernames)
 
 @app.route('/signup', methods=['POST'])
 def signup_user():
@@ -37,6 +25,18 @@ def signup_user():
         user = User(username,password)
         users.append(user)
         return "User successfully added"
+
+@app.route('/users', methods=['GET'])
+def get_users():
+    usernames = []
+    for user in users:
+        usernames.append(user.username)
+    return jsonify(usernames)
+
+def get_loggedin_user():
+        for user in users:
+            if user.username == session['username']:
+                return user
 
 @app.route('/login', methods=['POST'])
 def login_user(): 
@@ -58,18 +58,19 @@ def requests():
         quantity = request.form['quantity']
         description = request.form['description']
         user_request = Request(category, item_name, quantity, description)
-        user = get_loggedin_user() 
         user_requests.append(user_request)
         return "Request successfully created"
 
     if request.method == 'GET':
+        requests_list = [] 
         for user_request in user_requests:
-            category = jsonify(category)
-            item_name = jsonify(item_name)
-            quantity = jsonify(quantity)
-            description = jsonify(description)
-            user_requests.append(user_request)
-        return user_requests
+            user_request = dict([('category', user_request.category),
+            ('item_name', user_request.item_name),
+            ('quantity', user_request.quantity),
+            ('description', user_request.description)])
+            requests_list.append(user_request)
+
+        return jsonify(requests_list)
 
 app.run()
  
