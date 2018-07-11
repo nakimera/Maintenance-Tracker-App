@@ -1,7 +1,5 @@
 import os 
-
 from flask import Flask, request, jsonify, session
-
 from app.models.users import User
 from app.models.requests import Request
 
@@ -13,53 +11,80 @@ users = []
 user_requests = []
 logged_in_user = None
 
-@app.route('/', methods=['GET'])
-def home():
-    return "<h1>Maintenance Tracker</h1><p>Hello, World</p>"
-
 @app.route('/signup', methods=['POST'])
 def signup_user():
     if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password'] 
-        user = User(username,password)
+        data = request.get_json(force = True)
+        username = data.get("username", None)
+        password = data.get("password", None)
+        user = User(username, password)
         users.append(user)
-        return "User successfully added"
+        return jsonify({
+            "message": "User sucessfully created",
+            "status": True,
+            "data": {
+                "id": user.id,
+                "username": "{}".format(username)
+                }
+            }), 201
+
+        # else:
+        #     return {"message": "User account already exists",
+        #     "status": False,
+        #     "data": {"id": user.id,
+        #     "username": user.username,
+        #     "password": user.password}
+        #     }, 200
 
 @app.route('/users', methods=['GET'])
 def get_users():
     usernames = []
     for user in users:
         usernames.append(user.username)
-    return jsonify(usernames)
+    return jsonify({
+        "message": "Users successfully retrieved",
+        "status": True, 
+        "data": "{}".format(usernames)}), 200
+
+@app.route('/login', methods=['POST'])
+def login_user(): 
+    if request.method == 'POST':
+        data = request.get_json(force = True)
+        username = data.get("username", None)
+        password = data.get("password", None)
+        for user in users:
+            if user.username == username and user.password == password:
+                session['username'] = user.username
+                return jsonify({
+                    "message": "{} logged in".format(username),
+                    "status": True
+                }), 200
+            
+        return jsonify({
+                    "message": "Either username or password is incorrect",
+                    "status": False
+                }), 404
 
 def get_loggedin_user():
         for user in users:
             if user.username == session['username']:
                 return user
 
-@app.route('/login', methods=['POST'])
-def login_user(): 
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password'] 
-        for user in users:
-            if user.username == username and user.password == password:
-                session['username'] = user.username
-                return user.username + " logged in" 
-            else:
-                return 'Either username or password is incorrect'
-            
 @app.route('/users/requests', methods=['POST', 'GET'])
 def requests():
     if request.method == 'POST':
-        category = request.form['category']
-        item_name = request.form['item_name']
-        quantity = request.form['quantity']
-        description = request.form['description']
+        data = request.get_json(force = True)
+        user = logged_in_user
+        category = data.get("category", None)
+        item_name = data.get("item_name", None)
+        quantity = data.get("quantity", None)
+        description = data.get("description", None)
         user_request = Request(category, item_name, quantity, description)
-        user_requests.append(user_request)
-        return "Request successfully created"
+        user.add_request(user_request)
+        return jsonify({
+                "message": "Request successfully created",
+                "status": True
+                })    
 
     if request.method == 'GET':
         requests_list = [] 
