@@ -11,8 +11,8 @@ users = []
 user_requests = []
 logged_in_user = None
 
-@app.route('/signup', methods=['POST'])
-def signup_user():
+@app.route('/users', methods=['POST', 'GET'])
+def app_users():
     if request.method == 'POST':
         data = request.get_json(force = True)
         username = data.get("username", None)
@@ -28,25 +28,16 @@ def signup_user():
                 }
             }), 201
 
-        # else:
-        #     return {"message": "User account already exists",
-        #     "status": False,
-        #     "data": {"id": user.id,
-        #     "username": user.username,
-        #     "password": user.password}
-        #     }, 200
+    if request.method == 'GET':
+        usernames = []
+        for user in users:
+            usernames.append(user.username)
+        return jsonify({
+            "message": "Users successfully retrieved",
+            "status": True, 
+            "data": "{}".format(usernames)}), 200
 
-@app.route('/users', methods=['GET'])
-def get_users():
-    usernames = []
-    for user in users:
-        usernames.append(user.username)
-    return jsonify({
-        "message": "Users successfully retrieved",
-        "status": True, 
-        "data": "{}".format(usernames)}), 200
-
-@app.route('/login', methods=['POST'])
+@app.route('/users/login', methods=['POST'])
 def login_user(): 
     if request.method == 'POST':
         data = request.get_json(force = True)
