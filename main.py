@@ -153,21 +153,20 @@ def requests():
 #individual request
 @app.route('/api/v1/users/requests/<requestId>', methods=['PUT', 'GET'])       
 def indiv_request(requestId):
-    ls = []
     for user_request in user_requests:
         if user_request.requestId == int(requestId):
-            user_request_dict = dict([
+            indiv_request = dict([
                     ('requestId', user_request.requestId),
                     ('category', user_request.category),
                     ('item_name', user_request.item_name),
                     ('quantity', user_request.quantity),
                     ('description', user_request.description)])
-            ls.append(user_request_dict)
+    
             if request.method == 'GET':    
                 return jsonify({
                     "message": "Request successfully retrieved",
                     "status": True,
-                    "data": ls
+                    "data": indiv_request
                 }), 200
             
 
