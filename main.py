@@ -99,18 +99,19 @@ def login_user():
 
 #generate requestId function
 def generate_requestId():
+    requestId = random.randint(1,1000)
     if requestId in requestIds:
         requestId = random.randint(1,1000)
         requestIds.append(requestId)
     return requestId
 
-    
+
 #user requests
 @app.route('/api/v1/users/requests', methods=['POST', 'GET'])
 def requests():
     if request.method == 'POST':
         data = request.get_json(force = True)
-        requestId = data.get("requestId", None)
+        requestId = generate_requestId()
         category = data.get("category", None)
         item_name = data.get("item_name", None)
         quantity = data.get("quantity", None)
