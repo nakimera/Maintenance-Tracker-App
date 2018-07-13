@@ -90,10 +90,6 @@ def login_user():
                     "status": False
                 }), 404
 
-def get_loggedin_user():
-        for user in users_list:
-            if user.username == session['username']:
-                return user
 
 #user requests
 @app.route('/api/v1/users/requests', methods=['POST', 'GET'])
