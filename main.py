@@ -2,6 +2,7 @@ import os
 from flask import Flask, request, jsonify, make_response
 import jwt
 import datetime
+import random
 
 from app.models.users import User
 from app.models.requests import Request
@@ -12,6 +13,7 @@ app.config["DEBUG"] = True
 
 users_list = []
 user_requests = []
+requestIds = []
 
 @app.route('/unprotected')
 def unprotected():
@@ -36,7 +38,8 @@ def login():
 
     return make_response('could not verify', 401, {'www-Authenticate': 'Basic realm="Login Required'})
 
-#users
+
+#users endpoint
 @app.route('/api/v1/users', methods=['POST', 'GET'])
 def users():
     if request.method == 'POST':
@@ -64,6 +67,7 @@ def users():
 
     if request.method == 'GET':
         usernames = []
+
         for user in users_list:
             usernames.append(user.username)
         return jsonify({
@@ -71,15 +75,17 @@ def users():
             "status": True, 
             "data": "{}".format(usernames)}), 200
 
+
 @app.route('/api/v1/users/login', methods=['POST'])
 def login_user(): 
     if request.method == 'POST':
         data = request.get_json(force = True)
         username = data.get("username", None)
         password = data.get("password", None)
+
         for user in users_list:
+
             if user.username == username and user.password == password: 
-                
                 return jsonify({
                     "message": "{} logged in".format(username),
                     "status": True
@@ -91,10 +97,17 @@ def login_user():
                 }), 404
 
 
+#generate requestId function
+def generate_requestId():
+    if requestId in requestIds:
+        requestId = random.randint(1,1000)
+        requestIds.append(requestId)
+    return requestId
+
+    
 #user requests
 @app.route('/api/v1/users/requests', methods=['POST', 'GET'])
 def requests():
-
     if request.method == 'POST':
         data = request.get_json(force = True)
         requestId = data.get("requestId", None)
@@ -116,13 +129,12 @@ def requests():
             return jsonify({'message': 'Please fill the description field'}), 400
 
         else:
-            prossie = User("naki", "kk")
             user_request = Request(requestId, category, item_name, quantity, description)
             user_requests.append(user_request)
             return jsonify({
                     "message": "Request successfully created",
                     "status": True,
-                    "{}".format(prossie.username): {
+                    "data": {
                         "requestId": "{}".format(requestId),
                         "category": "{}".format(category),
                         "item_name": "{}".format(item_name),
@@ -150,28 +162,64 @@ def requests():
             "data": all_requests
         }), 200
 
-#individual request
-@app.route('/api/v1/users/requests/<requestId>', methods=['PUT', 'GET'])       
-def indiv_request(requestId):
-    for user_request in user_requests:
-        if user_request.requestId == int(requestId):
-            indiv_request = dict([
-                    ('requestId', user_request.requestId),
-                    ('category', user_request.category),
-                    ('item_name', user_request.item_name),
-                    ('quantity', user_request.quantity),
-                    ('description', user_request.description)])
+
+# convert request to dictionary function
+def convert_req_to_dict(user_request):
+    if not user_request:
+        return {}
     
-            if request.method == 'GET':    
-                return jsonify({
-                    "message": "Request successfully retrieved",
-                    "status": True,
-                    "data": indiv_request
-                }), 200
+    return dict([
+            ('requestId', user_request.requestId),
+            ('category', user_request.category),
+            ('item_name', user_request.item_name),
+            ('quantity', user_request.quantity),
+            ('description', user_request.description)])
+
+
+# get request by requestId func
+def get_request_by_requestId(requestId):
+    for user_request in user_requests:
+
+        if user_request.requestId == int(requestId):
+            return user_request
+    return None
             
 
-            if request.method == 'PUT':
-                return "something"
+#individual request
+@app.route('/api/v1/users/requests/<requestId>', methods=['PUT', 'GET'])       
+def indiv_request(requestId): 
+    one_request = get_request_by_requestId(requestId) 
+
+    if not one_request:
+        return jsonify({
+            "message" : "Request not found",
+            "status": False}), 203
+
+    if request.method == 'GET':  
+        return jsonify({
+            "message": "Request successfully retrieved",
+            "status": True,
+            "data": convert_req_to_dict(one_request)
+            }), 200
+
+    if request.method == 'PUT':
+        data = request.get_json(force = True)
+
+    for key, value in data.items():
+        if key == "item_name":
+            one_request.name = value
+        elif key  == "category":
+            one_request.category = value
+        elif key  == "quantity":
+            one_request.quantity = value
+        elif key  == "description":
+            one_request.description = value
+        
+    return jsonify({
+            "message": "Request successfully updated",
+            "status": True,
+            "data": convert_req_to_dict(one_request)
+            }), 200
 
 app.run()
  
