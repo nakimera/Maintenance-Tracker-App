@@ -13,8 +13,6 @@ app.config["DEBUG"] = True
 users_list = []
 user_requests = []
 
-
-
 @app.route('/unprotected')
 def unprotected():
     return ""
@@ -37,9 +35,6 @@ def login():
             return jsonify({'token': token})
 
     return make_response('could not verify', 401, {'www-Authenticate': 'Basic realm="Login Required'})
-
-
-
 
 #users
 @app.route('/api/v1/users', methods=['POST', 'GET'])
