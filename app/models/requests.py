@@ -6,3 +6,4 @@ class Request(object):
         self.item_name = item_name
         self.quantity = int(quantity)
         self.description = description
+        

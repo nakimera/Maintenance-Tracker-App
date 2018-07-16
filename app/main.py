@@ -1,11 +1,9 @@
-import os 
-from flask import Flask, request, jsonify, make_response
-import jwt
+import os
 import datetime
 import random
-
-from app.models.users import User
-from app.models.requests import Request
+from flask import Flask,  request, jsonify, make_response
+from  models.users import User
+from models.requests import Request
 
 app = Flask(__name__)
 app.secret_key = os.urandom(12)
@@ -14,6 +12,10 @@ app.config["DEBUG"] = True
 users_list = []
 user_requests = []
 requestIds = []
+
+@app.route('/')
+def home():
+    return "home"
 
 @app.route('/unprotected')
 def unprotected():
@@ -43,7 +45,7 @@ def login():
 @app.route('/api/v1/users', methods=['POST', 'GET'])
 def users():
     if request.method == 'POST':
-        data = request.get_json(force = True)
+        data = request.get_json(force=True)
         username = data.get("username", None)
         password = data.get("password", None)
 
@@ -221,10 +223,7 @@ def indiv_request(requestId):
             "status": True,
             "data": convert_req_to_dict(one_request)
             }), 200
+            
 
-app.run()
- 
-    
-
-
-
+if __name__ == "__main__":
+    app.run()
