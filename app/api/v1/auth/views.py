@@ -1,6 +1,11 @@
+from flask import (Blueprint, jsonify, request)
+from app.models.users import User
+
+mod =  Blueprint('auth', __name__) 
+
 users_list = []
 
-@app.route('/api/v1/users/login', methods=['POST'])
+@mod.route('/login', methods=['POST'])
 def login_user(): 
     if request.method == 'POST':
         data = request.get_json(force = True)
@@ -20,7 +25,7 @@ def login_user():
                     "status": False
                 }), 404
 
-@app.route('/api/v1/users', methods=['POST', 'GET'])
+@mod.route('/', methods=['POST', 'GET'])
 def users():
     if request.method == 'POST':
         data = request.get_json(force=True)
@@ -53,4 +58,5 @@ def users():
         return jsonify({
             "message": "Users successfully retrieved",
             "status": True, 
-            "data": "{}".f
+            "data": usernames
+            })
