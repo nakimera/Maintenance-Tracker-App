@@ -1,6 +1,6 @@
 import random
 from flask import (Blueprint, jsonify, request)
-from app.models.requests import Request
+from app.api.v1.request.requests import Request
 
 mod =  Blueprint('request', __name__) 
 

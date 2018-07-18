@@ -1,5 +1,5 @@
 from flask import (Blueprint, jsonify, request)
-from app.models.users import User
+from app.api.v1.auth.users import User
 
 mod =  Blueprint('auth', __name__) 
 
